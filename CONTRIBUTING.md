@@ -1,4 +1,4 @@
-Contributing to Barangay Health Center System App (short guide)
+Contributing to Barangay Cubi-Cubi Health Center System App (short guide)
 
 1. Project layout
 - `src/` : application source
@@ -27,4 +27,5 @@ Contributing to Barangay Health Center System App (short guide)
 - `npm install` then `npm run dev` to start the vite dev server.
 
 Thanks for contributing — keep changes scoped and document new files briefly.
+
 
