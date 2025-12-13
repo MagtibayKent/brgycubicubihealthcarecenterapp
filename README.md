@@ -1,4 +1,4 @@
-# Barangay Clinic React App
+## Barangay Cubi-Cubi Health Center Record System
 
 ## Description
 A lightweight clinic records frontend built with Vite + React and Supabase.
@@ -37,4 +37,5 @@ The app will be available at the Vite dev URL (usually `http://localhost:5173`).
 - Centralize data access through `supabaseClient.js` or a new `src/services/` layer.
 
 ## Contributing
+
 See `CONTRIBUTING.md` for a short guide on project conventions and how to extend the app.
