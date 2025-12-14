@@ -1,23 +1,79 @@
-## Barangay Cubi-Cubi Health Center Record System
+# Barangay Clinic System
 
 ## Description
-A lightweight clinic records frontend built with Vite + React and Supabase.
+A full-stack clinic records management application for managing patient visits, medical records, and generating clinic statistics. The system uses a React frontend for user interface and a Node.js backend for privileged Supabase operations.
 
-## Technologies
-- **Frontend Framework:** Vite + React
-- **Backend/Database:** Supabase (PostgREST)
-- **Charts:** Chart.js + react-chartjs-2 (optional)
+## Frameworks and Technologies
 
-## Installation
-1. Ensure Node.js (v16+) is installed.
-2. From the project root, run:
+**Frontend:**
+- Vite + React 18
+- Supabase (PostgREST API)
+- Chart.js + react-chartjs-2 for reports
+
+**Backend:**
+- Node.js + Express
+- Supabase (service_role privileged operations)
+- CORS enabled for cross-origin requests
+
+**Database:**
+- Supabase (PostgreSQL)
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js v16+ and npm
+- Git
+
+### Frontend Setup
+1. Install dependencies:
    ```bash
    npm install
+   ```
+
+2. Create `.env` file (copy from `.env.example`):
+   ```bash
+   cp .env.example .env
+   ```
+   Fill in your Supabase credentials:
+   ```
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_anon_key
+   VITE_BACKEND_URL=http://localhost:4242
+   ```
+
+3. Start the development server:
+   ```bash
    npm run dev
    ```
-3. Configure Supabase: Update `src/supabaseClient.js` with your Supabase URL and anon key, or use environment variables for production.
+   App available at `http://localhost:5173`
 
-The app will be available at the Vite dev URL (usually `http://localhost:5173`).
+### Backend Setup (Optional)
+1. Navigate to backend folder:
+   ```bash
+   cd backend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create `.env` file (copy from `.env.example`):
+   ```bash
+   cp .env.example .env
+   ```
+   Fill in Supabase credentials:
+   ```
+   SUPABASE_URL=your_supabase_url
+   SUPABASE_SERVICE_ROLE=your_service_role_key
+   PORT=4242
+   ```
+
+4. Start backend (with auto-reload):
+   ```bash
+   npm run dev
+   ```
+   Backend available at `http://localhost:4242`
 
 ## Features
 - **Record Management:** New visit forms, listing, search, edit, and delete flows (`src/components/Record.jsx`)
@@ -37,5 +93,4 @@ The app will be available at the Vite dev URL (usually `http://localhost:5173`).
 - Centralize data access through `supabaseClient.js` or a new `src/services/` layer.
 
 ## Contributing
-
 See `CONTRIBUTING.md` for a short guide on project conventions and how to extend the app.
