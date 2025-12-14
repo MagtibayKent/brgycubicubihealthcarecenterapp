@@ -1,8 +1,0 @@
-# Ignore backend when deploying the frontend as a static site to Vercel
-backend/
-backend/**
-backend/package.json
-
-# Local env files
-.env
-backend/.env
